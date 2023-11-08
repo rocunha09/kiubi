@@ -132,6 +132,7 @@ static void	exec_validation(int argc, char **argv)
 	t_map	map;
 	t_data	data;
 
+	cube.map = &map;
 	map.mlx = &cube;
 	map.data = &data;
 	if (argc == 2 && !check_valid_file(&map, argv[1], ".cub"))

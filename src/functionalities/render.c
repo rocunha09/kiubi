@@ -114,8 +114,8 @@ int	cub_update(void *param)
 	g = param;
 	if (!(g->nframes % g->rate))
 	{
-		if (!(g->nframes % (2 * g->rate)))
-			update_anim(g);
+		//if (!(g->nframes % (2 * g->rate)))
+			//update_anim(g);
 		if (!(g->nframes % (10 * g->rate)))
 			g->pl.door_cooldown = 0;
 		check_move(g);

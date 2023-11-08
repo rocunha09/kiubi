@@ -99,6 +99,7 @@ typedef struct	s_img
 	void			*i;
 	char			*addr;
 	XShmSegmentInfo	shm;
+	struct s_map	*map;
 }				t_img;
 
 typedef struct	s_xvar
