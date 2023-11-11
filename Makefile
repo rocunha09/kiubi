@@ -11,7 +11,6 @@
 #/* ************************************************************************** */
 
 SRCS =	./src/main.c 								\
-		./src/functionalities/map.c					\
 		./src/functionalities/error.c				\
 		./src/functionalities/color.c 				\
 		./src/functionalities/minimap.c				\
@@ -21,7 +20,6 @@ SRCS =	./src/main.c 								\
 		./src/functionalities/utils2.c				\
 		./src/functionalities/my_mlx.c 				\
 		./src/functionalities/game.c 				\
-		./src/functionalities/parse_map.c			\
 		./src/functionalities/textures.c  			\
 		./src/functionalities/player.c				\
 		./src/functionalities/end_linux.c 			\

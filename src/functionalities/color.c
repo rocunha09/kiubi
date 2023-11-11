@@ -6,7 +6,7 @@
 /*   By: llima-da <llima-da @student.42.rio>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 18:13:10 by rafade-o          #+#    #+#             */
-/*   Updated: 2023/11/05 20:04:28 by llima-da         ###   ########.fr       */
+/*   Updated: 2023/11/11 19:05:38 by llima-da         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,24 @@ int	create_trgb(t_color c)
 	return (c.t << 24 | c.r << 16 | c.g << 8 | c.b);
 }
 
+// O código é uma função em C chamada create_rgbt que recebe um inteiro col como
+// argumento. A função cria uma estrutura t_color a partir do inteiro col. A
+// função começa definindo a variável c como uma estrutura t_color. Em seguida,
+// a função obtém o valor de transparência da cor com a operação col >> 24 &
+// 0xFF. A função obtém os valores de vermelho, verde e azul da cor com as
+// operações col >> 16 & 0xFF, col >> 8 & 0xFF e col & 0xFF, respectivamente.
+// Por fim, a função retorna a estrutura t_color criada com os valores obtidos.
+
+t_color	create_rgbt(int col)
+{
+	t_color	c;
+
+	c.t = (col >> 24) & 0xFF;
+	c.r = (col >> 16) & 0xFF;
+	c.g = (col >> 8) & 0xFF;
+	c.b = col & 0xFF;
+	return (c);
+}
 
 // O código é uma função em C chamada cub_invert_color que recebe um
 // ponteiro para uma estrutura do tipo t_game como argumento. A função inverte

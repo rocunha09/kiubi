@@ -6,7 +6,7 @@
 /*   By: llima-da <llima-da @student.42.rio>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 18:13:10 by rafade-o          #+#    #+#             */
-/*   Updated: 2023/11/05 19:41:02 by llima-da         ###   ########.fr       */
+/*   Updated: 2023/11/11 19:06:06 by llima-da         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,8 +114,8 @@ int	cub_update(void *param)
 	g = param;
 	if (!(g->nframes % g->rate))
 	{
-		//if (!(g->nframes % (2 * g->rate)))
-			//update_anim(g);
+		/* if (!(g->nframes % (2 * g->rate)))
+			update_anim(g); */
 		if (!(g->nframes % (10 * g->rate)))
 			g->pl.door_cooldown = 0;
 		check_move(g);

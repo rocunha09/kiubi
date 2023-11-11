@@ -6,7 +6,7 @@
 /*   By: llima-da <llima-da @student.42.rio>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 18:13:10 by rafade-o          #+#    #+#             */
-/*   Updated: 2023/11/05 19:49:21 by llima-da         ###   ########.fr       */
+/*   Updated: 2023/11/11 19:07:55 by llima-da         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,8 +46,6 @@ t_img	*mlx_load_img(void *ptr, char *path)
 	return (i);
 }
 
-
-
 // A função degree_to_radians em C recebe um float "degree" que representa um
 // ângulo em graus. Ela é responsável por converter o ângulo de graus para
 // radianos.
@@ -73,3 +71,4 @@ void	ft_free_matrix(char **m)
 	}
 	free(m);
 }
+
