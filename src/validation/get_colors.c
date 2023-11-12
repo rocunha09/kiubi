@@ -6,7 +6,7 @@
 /*   By: llima-da <llima-da @student.42.rio>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 18:13:10 by rafade-o          #+#    #+#             */
-/*   Updated: 2023/11/05 20:06:00 by llima-da         ###   ########.fr       */
+/*   Updated: 2023/11/12 19:22:49 by llima-da         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,20 @@ static int	fill_colors(t_map *map)
 	char	**temp;
 
 	temp = double_split(map->ceiling, ' ', ',');
+
+	//[INICIO - rafael]	//roda ai
+	/*
+	int y = 0;
+	while (temp[y])
+	{
+		printf("temp[%d] = %s\n", y, temp[y]);
+		y++;
+	}
+	getchar();
+	*/
+	//[FIM - rafael]
+
+
 	map->data->c_green = ft_atoi(temp[2]);
 	map->data->c_blue = ft_atoi(temp[3]);
 	set_ceiling_color_by_rgb(temp);

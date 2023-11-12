@@ -6,7 +6,7 @@
 /*   By: llima-da <llima-da @student.42.rio>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 18:13:10 by rafade-o          #+#    #+#             */
-/*   Updated: 2023/11/05 20:06:16 by llima-da         ###   ########.fr       */
+/*   Updated: 2023/11/11 23:31:25 by llima-da         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,10 @@ int	check_valid_file(t_map *map, char *str, char *ext)
 	if (!check_extension(str, ext, ft_strlen(str)))
 	{
 		if (!ft_strncmp(ext, ".cub", 5))
+		{
 			set_fd(fd);
+			map->fd = get_fd();
+		}
 		return (0);
 	}
 	else

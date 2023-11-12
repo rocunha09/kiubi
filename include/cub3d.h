@@ -6,7 +6,7 @@
 /*   By: llima-da <llima-da @student.42.rio>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 18:13:10 by rafade-o          #+#    #+#             */
-/*   Updated: 2023/11/05 17:10:31 by llima-da         ###   ########.fr       */
+/*   Updated: 2023/11/12 20:10:49 by llima-da         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -294,6 +294,7 @@ int					biggest_string(char **str);
 int					find_directions(t_data *data, t_map *map, int i, int j);
 char				**double_split(char *s, char c1, char c2);
 char				*ft_strjoin2(char *s1, char *s2);
+char				*ft_strjoin3(char const *s1, char const *s2);
 int					clean_map(t_map *map);
 char				*find_string(char *str, char **r_file, int range);
 int					create_trgb(t_color c);

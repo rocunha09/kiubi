@@ -6,7 +6,7 @@
 /*   By: llima-da <llima-da @student.42.rio>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 18:13:10 by rafade-o          #+#    #+#             */
-/*   Updated: 2023/11/05 17:08:46 by llima-da         ###   ########.fr       */
+/*   Updated: 2023/11/11 23:26:43 by llima-da         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ int	read_file_map(t_map *map)
 	char	*gnl;
 
 	aux = ft_strdup("");
+	gnl = NULL;
 	while (42)
 	{
 		gnl = get_next_line(map->fd);

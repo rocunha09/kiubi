@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   validation_map_utils.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rafade-o <rafade-o@student.42.rio>        +#+  +:+       +#+         */
+/*   By: llima-da <llima-da @student.42.rio>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 18:13:10 by rafade-o          #+#    #+#             */
-/*   Updated: 2023/11/02 02:51:01 by rafade-o         ###   ########.fr       */
+/*   Updated: 2023/11/12 20:11:14 by llima-da         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char	**close_map(t_map *map)
 	new[0] = fill_char('*', map->biggest_line);
 	while (map->r_map[i])
 	{
-		new[j] = ft_strjoin("*", map->r_map[i]);
+		new[j] = ft_strjoin3("*", map->r_map[i]);
 		j++;
 		i++;
 	}

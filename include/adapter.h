@@ -6,7 +6,7 @@
 /*   By: llima-da <llima-da @student.42.rio>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 18:13:10 by rafade-o          #+#    #+#             */
-/*   Updated: 2023/11/05 20:08:24 by llima-da         ###   ########.fr       */
+/*   Updated: 2023/11/12 20:20:08 by llima-da         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,14 +46,18 @@ void	destroy_map(void);
 
 t_list	*get_map_n(void);
 void	set_map_n(char *new_map_n);
+void	destroy_map_n(t_list	*map_n);
 
 t_list	*get_map_e(void);
 void	set_map_e(char *new_map_e);
+void	destroy_map_e(t_list	*map_e);
 
 t_list	*get_map_s(void);
 void	set_map_s(char *new_map_s);
+void	destroy_map_s(t_list	*map_s);
 
 t_list	*get_map_w(void);
 void	set_map_w(char *new_map_w);
+void	destroy_map_w(t_list	*map_w);
 
 #endif

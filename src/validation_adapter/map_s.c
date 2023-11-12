@@ -6,20 +6,19 @@
 /*   By: llima-da <llima-da @student.42.rio>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 18:13:10 by rafade-o          #+#    #+#             */
-/*   Updated: 2023/11/05 19:53:48 by llima-da         ###   ########.fr       */
+/*   Updated: 2023/11/12 20:21:26 by llima-da         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/cub3d.h"
 
-static void	destroy_map_s(void)
+void	destroy_map_s(t_list	*map_s)
 {
-	t_list	*map_s;
-
 	ft_lstclear(&map_s, free);
 	map_s = NULL;
 	set_map_s(NULL);
 }
+
 
 static t_list	*map_s(const char *action, int initialize, ...)
 {
@@ -27,10 +26,7 @@ static t_list	*map_s(const char *action, int initialize, ...)
 	va_list		args;
 
 	if (initialize)
-	{
-		destroy_map_s();
 		map_s = NULL;
-	}
 	va_start(args, initialize);
 	if (strcmp(action, "get") == 0)
 	{

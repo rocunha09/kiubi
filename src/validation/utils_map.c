@@ -6,7 +6,7 @@
 /*   By: llima-da <llima-da @student.42.rio>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 18:13:10 by rafade-o          #+#    #+#             */
-/*   Updated: 2023/11/05 19:51:22 by llima-da         ###   ########.fr       */
+/*   Updated: 2023/11/12 20:10:23 by llima-da         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -120,4 +120,28 @@ char	*ft_strjoin2(char *s1, char *s2)
 	join[maxlen] = '\0';
 	free(s1);
 	return (join);
+}
+
+char    *ft_strjoin3(char const *s1, char const *s2)
+{
+    size_t    size;
+    char    *str;
+    char    *result;
+
+    if (!s1 || !s2)
+        return (0);
+    size = ft_strlen(s1) + ft_strlen(s2) + 1;
+    str = (char *)malloc(sizeof (char) * size);
+    if (str && s1 && s2)
+    {
+        result = str;
+        while (*s1)
+            *str++ = *s1++;
+        while (*s2)
+            *str++ = *s2++;
+        *str = '\0';
+    }
+    else
+        return (0);
+    return (result);
 }

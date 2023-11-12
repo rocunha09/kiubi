@@ -53,7 +53,7 @@ SRCS =	./src/main.c 								\
 
 OBJS = $(SRCS:.c=.o)
 
-CC = gcc
+CC = gcc -g
 CFLAGS =  -Wall -Wextra  -Wno-unused-function #-Werror 
 
 LIBFT_DIR = ./vendor/libft
@@ -113,6 +113,9 @@ fclean-gnl:
 
 fclean-mlx:
 	@$(MAKE) -C $(MINILIBX_DIR) clean
+
+runval:
+	valgrind --leak-check=full ./cub3d ./assets/maps/1.cub
 
 re: fclean fclean-libft fclean-gnl fclean-mlx all
 

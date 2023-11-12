@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ceiling_color.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rafade-o <rafade-o@student.42.rio>        +#+  +:+       +#+         */
+/*   By: llima-da <llima-da @student.42.rio>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 18:13:10 by rafade-o          #+#    #+#             */
-/*   Updated: 2023/11/02 02:51:01 by rafade-o         ###   ########.fr       */
+/*   Updated: 2023/11/12 00:57:20 by llima-da         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,5 +50,5 @@ void	set_ceiling_color_by_rgb(char **new_rgb)
 	rgb[0] = ft_atoi(new_rgb[0]);
 	rgb[1] = ft_atoi(new_rgb[1]);
 	rgb[2] = ft_atoi(new_rgb[2]);
-	ceiling_color("set", 1, create_rgbt(parser_mat_to_trgb(rgb)));
+	ceiling_color("set", 1, create_trgb(parser_mat_to_trgb(rgb)));
 }
