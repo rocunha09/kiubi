@@ -6,7 +6,7 @@
 /*   By: llima-da <llima-da @student.42.rio>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 18:13:10 by rafade-o          #+#    #+#             */
-/*   Updated: 2023/11/12 20:10:49 by llima-da         ###   ########.fr       */
+/*   Updated: 2023/11/12 20:59:52 by llima-da         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -128,6 +128,7 @@ typedef struct s_ray
 typedef struct s_game
 {
 	int				fd;
+	char			**entry_map;
 	char			**map;
 	int				height;
 	int				width;

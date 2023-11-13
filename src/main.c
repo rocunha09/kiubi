@@ -6,7 +6,7 @@
 /*   By: llima-da <llima-da @student.42.rio>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 18:13:10 by rafade-o          #+#    #+#             */
-/*   Updated: 2023/11/12 20:37:40 by llima-da         ###   ########.fr       */
+/*   Updated: 2023/11/12 21:07:58 by llima-da         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -111,6 +111,13 @@ static t_game	cub_init(void)
 	g.nframes = 0;
 	//printf("nframes: %ld\n", g.nframes);
 	g.map = get_map();
+	int i = 0;
+	while (g.map[i] != NULL)
+	{
+		printf("%s\n", g.map[i]);
+		i++;
+	}
+	
 	//printf("map: %s\n", g.map);
 	g.pl.dir = get_player_direction();
 	//printf("pl.dir: %c\n", g.pl.dir);
@@ -182,8 +189,9 @@ static void	start_validation(t_map *map)
 	if (check_closed_map(map->r_map))
 		perror("O mapa não está fechado!");
 	//printf("passou 7\n");
-	if (!check_valid_map(map->r_map, map->data, 0, 0))
-		set_map(map->r_map);
+	if (check_valid_map(map->r_map, map->data, 0, 0))
+		perror("O mapa não é válido!");
+		//set_map(map->r_map);
 	//printf("passou 8\n");
 	find_directions(map->data, map, 0, 0);
 	//printf("passou 9\n");
@@ -204,6 +212,18 @@ static void	exec_validation(int argc, char **argv)
 	}
 }
 
+static void end_reality_simulated()
+{
+	ft_print_str("[destroy map N]\n");
+	destroy_map_n(get_map_n());
+	ft_print_str("[destroy map S]\n");
+	destroy_map_s(get_map_s());
+	ft_print_str("[destroy map E]\n");
+	destroy_map_e(get_map_e());
+	ft_print_str("[destroy map W]\n");
+	destroy_map_w(get_map_w());
+}
+
 int	main(int argc, char **argv)
 {
 	t_game	g;
@@ -211,5 +231,6 @@ int	main(int argc, char **argv)
 	exec_validation(argc, argv);
 	g = cub_init();
 	game_init(&g);
+	end_reality_simulated();
 	return (0);
 }

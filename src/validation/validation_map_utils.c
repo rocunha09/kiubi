@@ -6,11 +6,29 @@
 /*   By: llima-da <llima-da @student.42.rio>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 18:13:10 by rafade-o          #+#    #+#             */
-/*   Updated: 2023/11/12 20:11:14 by llima-da         ###   ########.fr       */
+/*   Updated: 2023/11/12 21:13:00 by llima-da         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/cub3d.h"
+
+char	**map_dup(char **map)
+{
+	char	**new;
+	int		i;
+
+	i = 0;
+	new = malloc(sizeof(char *) * (matrix_size(map) + 1));
+	if (!new)
+		return (NULL);
+	while (map[i])
+	{
+		new[i] = ft_strdup(map[i]);
+		i++;
+	}
+	new[i] = NULL;
+	return (new);
+}
 
 /*modifica o mapa, colocando uma borda nele.*/
 char	**close_map(t_map *map)
@@ -34,6 +52,7 @@ char	**close_map(t_map *map)
 	}
 	new[j] = fill_char('*', map->biggest_line);
 	new[j + 1] = NULL;
+	set_map(map_dup(map->r_map));
 	ft_free_matrix(map->r_map);
 	map->r_map = new;
 	return (map->r_map);

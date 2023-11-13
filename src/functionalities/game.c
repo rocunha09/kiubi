@@ -6,7 +6,7 @@
 /*   By: llima-da <llima-da @student.42.rio>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 18:13:10 by rafade-o          #+#    #+#             */
-/*   Updated: 2023/11/05 20:02:50 by llima-da         ###   ########.fr       */
+/*   Updated: 2023/11/12 21:16:25 by llima-da         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,6 +110,7 @@ int	cub_mouse(int x, int y, t_game *g)
 
 void	init_attr(t_game *g)
 {
+	printf("ponteiro: %p\n", g->mlx_ptr);
 	g->win_ptr = mlx_new_window(g->mlx_ptr, WIN_W, WIN_H, "Cub3D");
 	g->win_img.i = mlx_new_image(g->mlx_ptr, WIN_W, WIN_H);
 	g->win_img.addr = mlx_get_data_addr(g->win_img.i, &g->win_img.bpp, \
